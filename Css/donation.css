@@ -1,0 +1,165 @@
+.background-img {
+  background-image: url(../media/donate_2.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.donation {
+  font-weight: 700;
+  color: rgb(28, 26, 26);
+  text-align: center;
+  padding: 20px;
+  margin: 10px 0 40px 500px;
+  max-width: 800px;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.donation::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  background-color: black;
+  transition: width 0.4s ease;
+}
+
+.donation:hover::after {
+  width: 100%;
+}
+
+.donation:hover, 
+  .donation:focus{
+  color: #00ced1;
+}
+
+.left-container {
+  background-color: #f4f4f4;
+  color: rgb(28, 26, 26);
+  padding: 30px;
+  width: 50%;
+  display: flex;
+  margin: 30px;
+  border-radius: 3px;
+}
+
+.right-container {
+  width: 60%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 0.5px solid rgb(150, 139, 139);
+  border-radius: 3px;
+}
+
+.title {
+  color: rgb(28, 26, 26);
+  padding: 7px;
+  margin: 10px;
+}
+
+.donation-description {
+  font-size: 14px;
+  font-weight: 600;
+  width: 90%;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.right-container img {
+  width: 100%;
+  height: auto;
+}
+
+.btn-donation {
+  background-color: #00ced1;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-donation:hover {
+  background-color: #008b8b;
+}
+
+.btn-donation span {
+  margin-left: 10px;
+  font-size: 1.6rem;
+}
+
+.small {
+  margin-top: 20px;
+  text-align: center;
+  color: #dddddd;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .background-img {
+    flex-direction: column;
+  }
+
+  .left-container, 
+  .right-container {
+    width: 90%;
+    margin: 15px;
+  }
+
+  .donation {
+    margin: 10px auto 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-container, 
+  .right-container {
+    width: 100%;
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .btn-donation {
+    padding: 12px;
+  }
+
+  .donation-description {
+    font-size: 13px;
+  }
+
+  .btn-donation span {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .donation {
+    margin: 10px auto;
+    font-size: 1.5rem;
+  }
+
+  .btn-donation {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .donation-description {
+    font-size: 12px;
+  }
+
+  .btn-donation span {
+    font-size: 1.2rem;
+  }
+}
