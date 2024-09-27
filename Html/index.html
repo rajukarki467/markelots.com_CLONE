@@ -5,32 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Website</title>
     <link rel="stylesheet" href="../Css/header.css" />
+    <link rel="stylesheet" href="../Css/footer.css" />
+    <link rel="stylesheet" href="../Css/donation.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <header>
-      <div class="container">
-        <div class="Logo">
-          <a href="#"
-            ><img
-              src="../media/MAKELOTS-logo-1.webp"
-              alt="MAKELOTS"
-              width="80px"
-              height="80px"
-          /></a>
+    <div id="header-container"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("./header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header-container").innerHTML = data;
+          });
+
+        fetch("./footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          });
+      });
+    </script>
+
+    <main>
+      <h1 class="donation">Donation</h1>
+      <div class="background-img">
+        <div class="left-container">
+          <p>
+            Your donation today can help make difference in an inspiring
+            entrepreneur's life. We count on donations from people just like you
+            to help us continue to keep our prices so low. We are dedicated to
+            helping small business owners everywhere.
+          </p>
         </div>
-        <div class="header-contain">
-          <a href="#">Donate</a>
-          <a href="#">Mission</a>
-          <a href="#">Statement</a>
-          <a href="#">Learning Resources</a>
-          <a href="#">Portfolio</a>
-          <a href="#">About Us</a>
-        </div>
-        <div class="contact-us">
-          <a href="#"> Contact Us </a>
+        <div class="right-container">
+          <h1 class="title">Donate & Support Our Cause</h1>
+          <p class="donation-description">
+            Help our organization by donating today! All donations go directly
+            to making a difference for our cause.
+          </p>
+          <img src="../media/donation1.jpg" alt="Donation.png" />
+          <button class="btn-donation">Donate Now <span>></span></button>
+          <div class="small">
+            <p>Secure your donation</p>
+          </div>
         </div>
       </div>
-    </header>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="../javascripts/header.js"></script>
   </body>
 </html>

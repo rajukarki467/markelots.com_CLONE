@@ -1,11 +1,12 @@
-*{
+/* Reset and global styles */
+* {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.container{
+.container {
   background-color: #fff;
   color: #444;
   padding: 1rem;
@@ -17,57 +18,62 @@
   flex-wrap: wrap;
 }
 
-.Logo{
-  margin-left:1.5rem;
+.Logo {
+  margin-left: 1.5rem;
 }
 
-
-a{
+/* Links and general styles */
+a {
   text-decoration: none;
   color: #444;
 }
 
-.header-contain{
+.hamburger {
+  font-size: 2.75rem;
+  font-weight: 700;
+  display: none;
+  cursor: pointer;
+}
+
+/* Header container */
+.header-contain {
   width: 60%;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.header-contain a {
-  padding: 0.5rem 1rem;
 }
 
 .header-contain a {
   position: relative;
-  text-decoration: none;
   color: #444;
   font-weight: 500;
-  padding:5px;
+  padding: 5px;
+  display: inline-block;
   transition: color 0.3s ease;
 }
 
-.header-contain a::after{
+/* Hover effect for links */
+.header-contain a::after {
   content: '';
   position: absolute;
-  width:0;
+  width: 0;
   height: 2px;
-  left:0;
+  left: 0;
   bottom: 0;
-  background-color: #1d2b3b;
-  transition:width 0.4s ease;
+  background-color: #263b53;
+  transition: width 0.4s ease;
 }
 
-.header-contain a:focus::after,
-.header-contain a:hover::after{
-  width:100%;
+.header-contain a:hover::after,
+.header-contain a:focus::after {
+  width: 100%;
 }
 
-.header-contain a:focus,
-.header-contain a:hover{
-  color:rgb(26, 215, 26);
+.header-contain a:hover,
+.header-contain a:focus {
+  color: rgb(26, 215, 26);
 }
 
+/* Contact Us button */
 .contact-us {
   background-color: #2C82C9;
   padding: 0.8rem 1.2rem;
@@ -82,13 +88,58 @@ a{
 
 .contact-us:hover,
 .contact-us:focus {
-  background: radial-gradient(circle, #030303 100%,#111213 0%);
+  background: radial-gradient(circle, #030303 100%, #111213 0%);
 }
 
 .contact-us a {
   color: #fff;
+  position: relative;
   z-index: 1;
-  position: relative; 
 }
 
+/* Media Queries for Responsive Design */
 
+/* For devices up to 970px */
+@media (max-width: 970px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .header-contain {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  .contact-us {
+    margin-top: 1rem;
+  }
+}
+
+/* For devices up to 600px */
+@media (max-width: 600px) {
+  .header-contain a {
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .header-contain a::after {
+   display: none;
+  }
+
+  .contact-us {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+}
