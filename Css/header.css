@@ -1,0 +1,94 @@
+*{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  background-color: #fff;
+  color: #444;
+  padding: 1rem;
+  font-size: 17px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Logo{
+  margin-left:1.5rem;
+}
+
+
+a{
+  text-decoration: none;
+  color: #444;
+}
+
+.header-contain{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header-contain a {
+  padding: 0.5rem 1rem;
+}
+
+.header-contain a {
+  position: relative;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  padding:5px;
+  transition: color 0.3s ease;
+}
+
+.header-contain a::after{
+  content: '';
+  position: absolute;
+  width:0;
+  height: 2px;
+  left:0;
+  bottom: 0;
+  background-color: #1d2b3b;
+  transition:width 0.4s ease;
+}
+
+.header-contain a:focus::after,
+.header-contain a:hover::after{
+  width:100%;
+}
+
+.header-contain a:focus,
+.header-contain a:hover{
+  color:rgb(26, 215, 26);
+}
+
+.contact-us {
+  background-color: #2C82C9;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #1a1b1c;
+  border-radius: 3px;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 4s ease-in;
+  background: radial-gradient(circle, #2C82C9 0%, #2C82C9 100%);
+}
+
+.contact-us:hover,
+.contact-us:focus {
+  background: radial-gradient(circle, #030303 100%,#111213 0%);
+}
+
+.contact-us a {
+  color: #fff;
+  z-index: 1;
+  position: relative; 
+}
+
+
