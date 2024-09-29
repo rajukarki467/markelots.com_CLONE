@@ -1,3 +1,14 @@
+.infos {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px auto;
+  font-size: 14px;
+  font-weight: 550;
+  color: rgb(86, 82, 82);
+}
+
 .background-img {
   background-image: url(../media/donate_2.jpg);
   background-size: cover;

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Website</title>
+  <link rel="stylesheet" href="../Css/header.css" />
+  <link rel="stylesheet" href="../Css/footer.css" />
+  <link rel="stylesheet" href="../Css/home.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="header-container"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch("./header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+        });
+
+      fetch("./footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    });
+  </script>
+  <main>
+    <div class="home-container">
+      <div class="herocomponent">
+        <a href="http://127.0.0.1:5500/Html/index.html" >
+          <img src="../media/hero.jpg" alt="hero image"></img></a>
+      </div>
+      <div class="discription">
+        <div class="discriptions">
+          <div class="left-img">
+            <img src="../media/bottom-image-small.jpg" alt="img 2">
+          </div>
+          <div class="img-descriptions">
+            <p>Our mission is to empower fledgling business owners by providing them with professional, high-quality
+              websites at an affordable cost. We strive to level the playing field and give small business owners the
+              tools they need to succeed in today’s digital age and unleash their full potential.
+
+              Our clients are at the heart of everything we do. We’re dedicated to providing personalized, attentive
+              service to each and every one of our clients, and believe that building strong relationships is the key to
+              our success. Moreover, we believe in building websites that are sustainable and scalable, ensuring that
+              our clients are able to achieve their long-term goals.</p>
+          </div>
+        </div>
+        <div class="para-below">
+          <p>In addition to our services, we also extend a helping hand to businesses in need. Over time, we’ve
+            graciously donated numerous websites to business owners just like you. If you require financial assistance
+            for your new business website, please don’t hesitate to get in touch. We’re wholeheartedly dedicated to your
+            success!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-cintainer">
+      <div class="videodescriptions">
+        <div class="video">
+          <video width="100%" controls>
+            <source src="../media/video/vid1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="descrp">
+          <ul>
+            <li> We work with you from start to finish of your website.</li>
+            <li>We are dedicated to making low-cost websites for those in need.</li>
+            <li>We will keep your website up to date and protected.</li>
+            <li>We guarantee you will love your new website. We are dedicated to making your launch a success!</li>
+          </ul>
+          <button class="button">See Our Design Options</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="about-container">
+      <div class="aboutus">
+   <p style="font-size:12px; margin-bottom:5px;">We're a community of tech-savvy dreamers and doers.</p>
+   <h1 style=" margin:10px 0 20px 0 ; font-weight: bold;">ABOUT US</h1>
+   <p style=" margin-bottom:25px;" >Make Lots Foundation is more than just a web development company that is founded to give small business owners a chance to have a professionally designed website without breaking the bank.
+
+    We're a community of tech-savvy dreamers and doers, united in our passion for helping small business owners succeed. Our team of experienced developers is dedicated to providing top-notch services and creating websites that meet the unique needs of our clients.
+    
+    We believe that every small business deserves a website that reflects the quality of its products and services, and that's why we're committed to delivering high-quality websites that are both functional and aesthetically pleasing.
+    
+    Our commitment to education and empowerment sets us apart and makes us more than just a provider of web development services, it makes us a partner in the success of small businesses everywhere.
+    
+    Are you ready to take your business to the next level? Let’s join hands!</p>
+    <button class="about-button">Read more</button>
+      </div>
+      <div class="imgabout">
+        <img src="../media/aboutimgwebp.webp" alt="About Us">
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="../javascripts/header.js"></script>
+</body>
+
+</html>

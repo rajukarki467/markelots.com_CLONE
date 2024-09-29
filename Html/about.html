@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="../Css/header.css" />
+    <link rel="stylesheet" href="../Css/footer.css" />
+    <link rel="stylesheet" href="../Css/about.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="header-container"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("./header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header-container").innerHTML = data;
+          });
+
+        fetch("./footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          });
+      });
+    </script>
+    <main>
+      <div class="infos">Home > About</div>
+      <div class="heading">
+        <h1>About Us</h1>
+      </div>
+      <div class="about-Container">
+        <div class="paragrapg">
+          <p style="text-align: center; font-size: 14px; margin-bottom: 10px">
+            ABOUT THE COMPANY
+          </p>
+          <h1
+            style="text-align: center; font-weight: bold; margin-bottom: 35px"
+          >
+            MAKELOTS
+          </h1>
+          <p>
+            Lots Foundation is more than just a web development company that is
+            founded to give small business owners a chance to have a
+            professionally designed website without breaking the bank. We’re a
+            community of tech-savvy dreamers and doers, united in our passion
+            for helping small business owners succeed. Our team of experienced
+            developers is dedicated to providing top-notch services and creating
+            websites that meet the unique needs of our clients. We believe that
+            every small business deserves a website that reflects the quality of
+            its products and services, and that’s why we’re committed to
+            delivering high-quality websites that are both functional and
+            aesthetically pleasing. Our commitment to education and empowerment
+            sets us apart and makes us more than just a provider of web
+            development services; it makes us a partner in the success of small
+            businesses everywhere. Are you ready to take your business to the
+            next level? Let’s join hands!
+          </p>
+        </div>
+        <div class="img">
+          <img src="../media/about.jpg" alt="About us" />
+        </div>
+      </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="../javascripts/header.js"></script>
+  </body>
+</html>
