@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Optional: light background for better contrast */
+}
+
+.infos {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px auto;
+  font-size: 14px;
+  font-weight: 550;
+  color: rgb(86, 82, 82);
+}
+
+.heading {
+  background-color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px auto;
+}
+
+.mission {
+  width: 70%; /* Center the mission container */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.missioncontainer {
+  position: relative;
+  margin: 20px;
+  display: flex; /* Use flex to control layout */
+}
+
+.mission-img {
+  width: 200px; 
+  height: 230px; 
+  margin: 20px; 
+  padding: 10px;
+}
+
+.mission-descriptions {
+  line-height: 28px;
+}
+
+
+@media(max-width:756px){
+  .infos,
+  .heading{
+     width: 100%;
+  }
+
+  .missioncontainer{
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mission-descriptions{
+    width: 100%;
+ 
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="../Css/header.css" />
+    <link rel="stylesheet" href="../Css/footer.css" />
+    <link rel="stylesheet" href="../Css/form.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="header-container"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("./header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header-container").innerHTML = data;
+          });
+
+        fetch("./footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          });
+      });
+    </script>
+    <main>
+      <div class="infos">Home > Contact Us</div>
+      <div class="heading">
+        <h1>Contact Us</h1>
+      </div>
+      <div class="form-container">
+        <h1 class="heading2">Send Us a Message</h1>
+        <form action="Post" method="post" class="form">
+          <div class="form-group">
+            <label for="name">Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required />
+            <div class="underline"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="email"
+              >Email Address <span class="required">*</span></label
+            >
+            <input type="email" id="email" name="email" required />
+            <div class="underline"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="number"
+              >Phone Number <span class="required">*</span></label
+            >
+            <input type="tel" id="number" name="number" required />
+            <div class="underline"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="description"
+              >Message <span class="required">*</span></label
+            >
+            <textarea id="description" name="description" required></textarea>
+            <div class="underline"></div>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <script src="../javascripts/form.js"></script>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="../javascripts/header.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="../Css/header.css" />
+    <link rel="stylesheet" href="../Css/footer.css" />
+    <link rel="stylesheet" href="../Css/learning.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="header-container"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("./header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header-container").innerHTML = data;
+          });
+
+        fetch("./footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          });
+      });
+    </script>
+
+    <main>
+      <div class="banner">
+        <div
+          class="learnhero"
+          style="background-image: url('../media/slider/slider1.jpg')"
+        >
+          <div class="information">
+            <h2>Working Together as a Team.</h2>
+            <a href="#">February 22 ,2023 Uncategorized</a>
+          </div>
+          <!-- <img src="../media/learning.jpg" alt="learning" /> -->
+        </div>
+        <div
+          class="learnhero"
+          style="background-image: url('../media/slider/slider2.jpg')"
+        >
+          <div class="information">
+            <h2>Workplace Distractions.</h2>
+            <a href="#">February 22 ,2023 Uncategorized</a>
+          </div>
+          <!-- <img src="../media/learning.jpg" alt="learning" /> -->
+        </div>
+        <div
+          class="learnhero"
+          style="background-image: url('../media/slider/slider3.jpg')"
+        >
+          <div class="information">
+            <h2>Digital Marketing.</h2>
+            <a href="#">February 22 ,2023 Uncategorized</a>
+          </div>
+          <!-- <img src="../media/learning.jpg" alt="learning" /> -->
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="../javascripts/header.js"></script>
+    <script src="../javascripts/slider.js"></script>
+  </body>
+</html>

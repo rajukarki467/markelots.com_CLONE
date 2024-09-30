@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="../Css/header.css" />
+    <link rel="stylesheet" href="../Css/footer.css" />
+    <link rel="stylesheet" href="../Css/mission.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="header-container"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("./header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header-container").innerHTML = data;
+          });
+
+        fetch("./footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          });
+      });
+    </script>
+
+    <main>
+      <div class="infos">Home > mission statement</div>
+      <div class="heading">
+        <h1>Mission Statement</h1>
+      </div>
+      <div class="mission">
+        <div class="missioncontainer">
+          <img
+            src="../media/mission.jpeg"
+            alt="Mission Statement"
+            class="mission-img"
+          />
+          <p class="mission-descriptions">
+            To empower fledgling business owners by providing them with
+            professional, high-quality websites at an affordable cost. We strive
+            to level the playing field and give small business owners the tools
+            they need to succeed in today’s digital age and unleash their full
+            potential. Our clients are at the heart of everything we do. We’re
+            dedicated to providing personalized, attentive service to each and
+            every one of our clients, and believe that building strong
+            relationships is the key to our success. Moreover, we believe in
+            building websites that are sustainable and scalable, ensuring that
+            our clients are able to achieve their long-term goals. In addition
+            to our services, we also extend a helping hand to businesses in
+            need. Over time, we’ve graciously donated numerous websites to
+            business owners just like you. If you require financial assistance
+            for your new business website, please don’t hesitate to get in
+            touch. We’re wholeheartedly dedicated to your success!
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="../javascripts/header.js"></script>
+  </body>
+</html>

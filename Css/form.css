@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; 
+}
+.infos {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px auto;
+  font-size: 14px;
+  font-weight: 550;
+  color: rgb(86, 82, 82);
+}
+
+.heading {
+  background-color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px auto;
+}
+.heading2 {
+  background-color: white;
+  display: flex;
+  color: #686262;
+  justify-content: center;
+  align-items: center;
+  margin:8px auto;
+}
+
+
+
+.form {
+  width: 100%;
+  padding: 50px 170px;
+  margin: 0 50px;
+}
+
+.form-container {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form-group {
+  position: relative;
+  margin: 30px 0;
+  width: 100%; 
+  padding: 8px;
+}
+
+label {
+  font-size: 1rem;
+  color: #616060; 
+  cursor: pointer; 
+  transition: color 0.3s;
+}
+
+.required {
+  color: red; /* Color for the asterisk */
+  margin-left: 4px; /* Space between label text and asterisk */
+}
+
+input,
+textarea {
+  display: none; 
+  border: none;
+  padding: 8px 0;
+  width: 100%; 
+  outline: none; 
+  font-size: 1rem;
+  color: #000000;
+  transition: border-color 0.3s;
+}
+
+.underline {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #4d4b4b;
+  bottom: 0;
+  left: 0;
+  transition: background-color 0.3s;
+}
+
+.form-group.active input,
+.form-group.active textarea {
+  display: block; 
+}
+
+.form-group.active .underline {
+  background-color: rgb(29, 151, 151);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: rgb(86, 183, 210);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgb(32, 139, 201); 
+}
